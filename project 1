@@ -1,0 +1,81 @@
+package Project;
+
+import java.util.*;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        String choice = null;
+        String list =null;
+        int value = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please Choose an option");
+        System.out.println("");
+        System.out.println("(1) Add a task ");
+        System.out.println("(2) Remove a task ");
+        System.out.println("(3) Update a task ");
+        System.out.println("(4) List all tasks ");
+        System.out.println("(0) Exit ");
+        choice = input.nextLine();
+        list = input.nextLine();
+        ArrayList<String> Task= new ArrayList<String>();
+
+        do {
+
+
+            switch (choice) {
+
+                case "1":
+                    System.out.println("Please add a task ");
+                    Task.add(list = input.nextLine());
+
+                    System.out.println("");
+                    System.out.println("(1) Add a task ");
+                    System.out.println("(2) Remove a task ");
+                    System.out.println("(3) Update a task ");
+                    System.out.println("(4) List all tasks ");
+                    System.out.println("(0) Exit ");
+
+                    choice = input.nextLine();
+                    break;
+                case "2":
+                    System.out.println("Which task do you wish to remove. has to be a string");
+                    Task.remove(input.nextLine());
+
+                    System.out.println("");
+                    System.out.println("(1) Add a task ");
+                    System.out.println("(2) Remove a task ");
+                    System.out.println("(3) Update a task ");
+                    System.out.println("(4) List all tasks ");
+                    System.out.println("(0) Exit ");
+                    choice = input.nextLine();
+                    break;
+                case "3":
+                    System.out.println("wish task do you wish to update ");
+
+                    Task.set(value = input.nextInt(),list = input.nextLine() );
+
+                    System.out.println("");
+                    System.out.println("(1) Add a task ");
+                    System.out.println("(2) Remove a task ");
+                    System.out.println("(3) Update a task ");
+                    System.out.println("(4) List all tasks ");
+                    System.out.println("(0) Exit ");
+
+                    choice = input.nextLine();
+                    break;
+                case "4":
+                    System.out.println("List all tasks");
+                    System.out.println("Here are all your Task: "+Task);
+
+                    choice = input.nextLine();
+                    break;
+            }
+        }
+            while ( Integer.parseInt(choice) > 0);
+
+        System.out.println("Exit");
+    }
+}
+
