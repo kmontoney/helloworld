@@ -1,0 +1,37 @@
+package Practice;
+
+import java.util.*;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        String choice = null;
+        String list = null;
+        Scanner input = new Scanner(System.in);
+        System.out.println("do you wish to enter a city enter yes. to exit enter END");
+        choice = input.nextLine();
+        list = input.nextLine();
+        ArrayList<String> city = new ArrayList<String>();;
+
+
+        do {
+
+
+            switch (choice) {
+
+                case "yes":
+                    System.out.println("Please enter a city");
+                    city.add(list = input.nextLine());
+                    System.out.println("do you wish to enter a city enter yes. to exit enter END");
+                    choice = input.nextLine();
+
+                    break;
+
+            }
+        }
+        while (choice.equals("yes"));
+
+        System.out.println("Exit");
+        System.out.println("Here are your cities" + city);
+
