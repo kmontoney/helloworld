@@ -1,0 +1,35 @@
+package junk;
+
+import java.util.Scanner;
+
+public class Main
+
+{
+
+
+    public static void main( String [] args )
+
+    {
+
+        float temperatureFahrenheit = 0;
+        float temperatureCelsius= 0;
+
+        while (temperatureFahrenheit > -460);
+        {
+
+
+            Scanner input = new Scanner(System.in);
+
+
+            System.out.print("Enter a  tempeture in Fahrenheit : ");
+            temperatureFahrenheit = input.nextFloat();
+            temperatureCelsius = 5F / 9F * (temperatureFahrenheit - 32F);
+            System.out.println(temperatureFahrenheit + " degrees Fahrenheit is " + temperatureCelsius + " degrees Celsius");
+
+
+        }
+
+
+    }
+
+}
