@@ -1,0 +1,43 @@
+package Week5;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.HashMap;
+
+
+import java.util.*;
+
+public class AddressBook {
+
+
+    public static void Main(String Name, String Address) {
+        HashMap<String, String> NameAddress = new HashMap<String, String>();
+        NameAddress.put(Name, Address);
+        System.out.println(NameAddress);
+    }
+
+
+
+    static String Name() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("your name");
+        String Name = in.next();
+        return Name;
+    }
+
+    static String Address(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("your name");
+        String Address = in.next();
+        return Address;
+    }
+
+    static void Search(String Address, String Name){
+        Scanner in = new Scanner(System.in);
+        System.out.println("to find search for an existing contact enter its name");
+       String val=NameAddress.get(Name = in.next());
+       System.out.println("The the contacts value is :"+ val);
+
+    }
+
+}
