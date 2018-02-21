@@ -1,0 +1,67 @@
+
+package week5;
+
+package Week5;
+
+import java.util.Scanner;
+import java.util.HashMap;
+
+
+import java.util.*;
+
+public class Main {
+
+    static Map<String, String> NameAddress( String Names, String Email, Map< String, String>){
+        NameAddress.put(Name, Address);
+
+}
+
+
+
+
+
+    public static String Main(String [] args ) {
+        HashMap<String, String> NameAddress = new HashMap<String, String>();
+        String Name = Names();
+        String Email = emailAddress();
+        
+
+
+
+
+    static String Names(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("your name");
+        String Name = in.next();
+        return Name;
+    }
+
+    static String emailAddress(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("your email");
+        String Email = in.next();
+        return Email;
+    }
+
+    static void SearchPerson(Map <String,String> NameAddress){
+            Scanner in = new Scanner(System.in);
+            System.out.println("to find search for an existing contact enter its name");
+            String val = NameAddress.get(Name = in.next());
+
+            while(true) {
+
+                if (Name.equals("end"); {
+                    break;
+                }
+
+                for(String key, NameAddress.keyget()){
+
+
+                System.out.println("The the contacts value is :" + NameAddress.get(Name));
+
+            }
+        }
+
+}
+    }
+}
