@@ -1,0 +1,73 @@
+package Week7;
+import java.util.*;
+/**
+ * Created by 029089 on 2/27/2018.
+ */
+
+class Contact{
+    private String name;
+    private String Email;
+
+    Contact(){}
+
+    Contact(String name ,String Email)
+    {
+        this.name = name;
+        this.Email = Email;
+    }
+
+     public String getName(){
+
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+  public String getEmail(){
+
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    public void display() {
+        System.out.println("your name" + " " + name + "and the email" + " " + Email);
+    }
+
+
+}
+class Business extends Contact{
+        private String phoneNumber;
+
+        Business( String name, String Email, String phoneNumber) {
+
+            super(name, Email);
+            this.phoneNumber = phoneNumber;
+
+
+
+        }
+
+    @Override
+    public void display(){
+        System.out.println("hi" + " " + getName() + "your email is" + " " + getEmail()  + " and phone" + " " + phoneNumber);
+
+    }
+}
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Business name = new Business("kyler "," Yofam@helloTeach.com","614-420-1738");
+        name.display();
+
+
+    }
+}
