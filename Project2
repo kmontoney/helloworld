@@ -1,0 +1,101 @@
+package Project2;
+
+import java.util.*;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        String choice = null;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please Choose an option");
+        System.out.println("");
+        System.out.println("(1) Add a task ");
+        System.out.println("(2) Remove a task ");
+        System.out.println("(3) Update a task ");
+        System.out.println("(4) List all tasks ");
+        System.out.println("(0) Exit ");
+        choice = input.nextLine();
+        HashMap<String, Integer> hmap = new HashMap< String, Integer>();
+
+        do {
+
+
+            switch (choice) {
+
+                case "1":
+
+
+                    System.out.print("Enter Task:");
+                    String Task = input.nextLine();
+                    System.out.print("Enter rank bewtween 0-5:");
+                    Integer Rank = Integer.parseInt(input.nextLine());
+                    Integer update = hmap.put(Task, Rank);
+
+
+
+                        System.out.println("");
+                        System.out.println("(1) Add a task ");
+                        System.out.println("(2) Remove a task ");
+                        System.out.println("(3) Update a task ");
+                        System.out.println("(4) List all tasks ");
+                        System.out.println("(0) Exit ");
+
+                        choice = input.nextLine();
+
+                    break;
+
+                    case "2":
+                    System.out.println("Which task do you wish to remove. has to be a string");
+                    hmap.remove(input.nextLine());
+
+                    System.out.println("");
+                    System.out.println("(1) Add a task ");
+                    System.out.println("(2) Remove a task ");
+                    System.out.println("(3) Update a task ");
+                    System.out.println("(4) List all tasks ");
+                    System.out.println("(0) Exit ");
+                    choice = input.nextLine();
+                    break;
+                case "3":
+                    System.out.println("wish task do you wish to update ");
+
+                    System.out.print("Enter Task:");
+                    String newTask = input.nextLine();
+
+                    System.out.print("Enter rank bewtween 0-5:");
+                    Integer newRank = Integer.parseInt(input.nextLine());
+
+
+
+
+                    // add the key value pair from user input to the hashmap
+
+                    Integer newupdate = hmap.put(newTask, newRank);
+
+                    System.out.println("");
+                    System.out.println("(1) Add a task ");
+                    System.out.println("(2) Remove a task ");
+                    System.out.println("(3) Update a task ");
+                    System.out.println("(4) List all tasks ");
+                    System.out.println("(0) Exit ");
+
+                    choice = input.nextLine();
+                    break;
+                case "4":
+                    System.out.println("List all tasks");
+                    System.out.println("Here are all your Task: "+hmap);
+
+                    choice = input.nextLine();
+                    break;
+            }
+        }
+        while ( Integer.parseInt(choice) > 0);
+
+        System.out.println("Exit");
+    }
+}
+
